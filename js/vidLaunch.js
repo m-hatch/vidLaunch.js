@@ -1,4 +1,4 @@
-function vidLaunch(hours, minutes, seconds) {
+function vidLaunch(hours, minutes, seconds, loop) {
     var now = new Date(),
         target = new Date(),
         video = document.getElementById('video'),
@@ -12,10 +12,8 @@ function vidLaunch(hours, minutes, seconds) {
         //console.log(duration);
     });
 
-    if(now.getHours() > hours ||
-      (now.getHours() == hours && now.getMinutes() > minutes) ||
-      now.getHours() == hours && now.getMinutes() == minutes && 
-      now.getSeconds() >= seconds) {
+    if(now.getHours() > hours || (now.getHours() == hours && now.getMinutes() > minutes) ||
+      now.getHours() == hours && now.getMinutes() == minutes && now.getSeconds() >= seconds) {
 
         target.setDate(now.getDate() + 1);
 
@@ -30,12 +28,14 @@ function vidLaunch(hours, minutes, seconds) {
     setTimeout(function() {
 
       video.play(); console.log('video init');
-  
-      var timerId = setInterval( function() {
 
-        video.play(); //console.log('video loop');
+      if(loop == true) {
 
-      }, duration);
+        var intervalId = setInterval( function() {
+          video.play(); //console.log('video loop');
+        }, duration);
+
+      }
 
     }, timeout);
 
@@ -50,7 +50,7 @@ $(document).ready(function() {
   m = timeNow.getMinutes(),
   s = timeNow.getSeconds() + 5;
 
-  // set play time (h, m, s)
-  vidLaunch(h, m, s);
+  // set play time (h, m, s, loop[boolean])
+  vidLaunch(h, m, s, true);
 
 });
