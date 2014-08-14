@@ -1,10 +1,16 @@
 function vidLaunch(hours, minutes, seconds) {
-    var now = new Date();
-    var target = new Date();
-    var video = document.getElementById('video');
-        
-    console.log('start');
-    console.log('video ', video);
+    var now = new Date(),
+        target = new Date(),
+        video = document.getElementById('video'),
+        duration;
+
+    //console.log('start');
+    //console.log('video ', video);
+
+    video.addEventListener('loadedmetadata', function() {
+      duration = Math.ceil(video.duration);
+        //console.log(duration);
+    });
 
     if(now.getHours() > hours ||
       (now.getHours() == hours && now.getMinutes() > minutes) ||
@@ -27,9 +33,9 @@ function vidLaunch(hours, minutes, seconds) {
   
       var timerId = setInterval( function() {
 
-        video.play(); console.log('video loop');
+        video.play(); //console.log('video loop');
 
-      }, 38000); // video length
+      }, duration);
 
     }, timeout);
 
