@@ -26,6 +26,11 @@ html { height: 100%; }
 .clear:after,
 .wrapper:after { clear: both; content: ""; display: block; height: 0; visibility: hidden; }
 
+/* fonts
+font-family: 'Play', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Abel', sans-serif;
+
 /* ============== content styles ================== */
 body{
 	background: url(../media/grey-bg.png) no-repeat center center fixed;
@@ -33,6 +38,7 @@ body{
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+	color:#fff;
 }
 #container{
 	position:relative;
@@ -49,8 +55,23 @@ body{
 	padding:50px 0;
 	background-color:#000;
 }
+.text{
+	margin: 0 0 10px 100px;
+}
 video{
 	width:100%;
 	height:auto;
 	padding: 0 100px;
+}
+h1{
+	font-family: 'Play', sans-serif;
+	font-size: 5em;
+	font-weight: bold;
+	line-height: 1;
+	margin-bottom: 5px;
+}
+h2{
+	font-family: 'Abel', sans-serif;
+	font-size: 1.6em;
+	letter-spacing: 0.16em;
 }
