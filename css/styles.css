@@ -46,16 +46,18 @@ body{
 #container{
 	position:relative;
 	width:86%;
-	height:100vh;
 	margin:50px auto;
 	background-color: rgba(0,0,0,0.4);
 }
 .vid-wrapper{
-	padding:50px 80px;
+	padding:50px 80px 15px 80px;
 	background-color:#000;
 }
 .text{
 	padding: 25px 80px;
+}
+.date{
+	padding-top:15px;
 }
 video{
 	width:100%;

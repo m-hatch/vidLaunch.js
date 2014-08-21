@@ -21,6 +21,9 @@
 				<source src="media/polina.webm" type="video/webm">
 				<source src="media/polina.mp4" type="video/mp4">
 			</video>
+			<div class="date">
+				<p id="servertime"></p>
+			</div>
 		</div>
 
 		<div class="text">
@@ -38,6 +41,7 @@
 		var serverTime = '<?php echo date("F d, Y H:i:s", time())?>',
 			serverDate = new Date(serverTime)
 			console.log(serverTime);
+			document.getElementById('servertime').innerHTML='Server time: '+serverTime;
 	</script>
 	
 	<!-- Plugin -->

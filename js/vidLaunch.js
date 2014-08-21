@@ -63,7 +63,7 @@ $(document).ready(function() {
   m = timeNow.getMinutes(),
   s = timeNow.getSeconds() + 5;
 
-  // set play time (h, m, s, loop[boolean])
+  // set play time (h, m, s, loop[boolean], servertime[boolean])
   vidLaunch(h, m, s, true, true);
 
 });
