@@ -35,9 +35,9 @@
 
 	<!-- PHP variables -->
 	<script type="text/javascript">
-		var serverTime = '<? echo date("F d, Y H:i:s", time())?>',
-			serverDate=new Date(serverTime)
-			//console.log(serverDate);
+		var serverTime = '<?php echo date("F d, Y H:i:s", time())?>',
+			serverDate = new Date(serverTime)
+			console.log(serverTime);
 	</script>
 	
 	<!-- Plugin -->

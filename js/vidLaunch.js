@@ -1,16 +1,18 @@
 function vidLaunch(hours, minutes, seconds, loop, servertime) {
 
-  //console.log('server time ', serverDate, ' in js plugin');
+  console.log('server time ', serverDate, ' in js plugin');
 
   var now = new Date(),
       target = new Date(),
       video = document.getElementById('video'),
       duration;
 
+  console.log('js now ', now);
   //change now to server time
   if(servertime == true) {
 
     now = serverDate;
+    console.log('now set to server ', now);
 
   } 
 
@@ -62,6 +64,6 @@ $(document).ready(function() {
   s = timeNow.getSeconds() + 5;
 
   // set play time (h, m, s, loop[boolean])
-  vidLaunch(h, m, s, true);
+  vidLaunch(h, m, s, true, true);
 
 });
