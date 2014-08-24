@@ -22,7 +22,7 @@
 				<source src="media/polina.mp4" type="video/mp4">
 			</video>
 			<div class="date">
-				<p id="servertime"></p>
+				<p>Launch video in<span id="launch-count">5</span>seconds</p>
 			</div>
 		</div>
 
@@ -41,7 +41,22 @@
 		var serverTime = '<?php echo date("F d, Y H:i:s", time())?>',
 			serverDate = new Date(serverTime)
 			console.log(serverTime);
-			document.getElementById('servertime').innerHTML='Server time: '+serverTime;
+	</script>
+
+	<!-- Display demo launch time -->
+	<script>
+		var displaySeconds = setInterval('startTime()', 1000);
+
+		var count = 4;
+		function startTime() {
+
+			if(count < 0){
+				clearInterval(displaySeconds);
+			} else{
+				document.getElementById('launch-count').innerHTML = count;
+				count--;
+			}
+		}
 	</script>
 	
 	<!-- Plugin -->

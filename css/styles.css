@@ -59,6 +59,11 @@ body{
 .date{
 	padding-top:15px;
 }
+#launch-count{
+	display: inline-block;
+	text-align: center;
+	width: 1.5em;
+}
 video{
 	width:100%;
 	height:auto;
