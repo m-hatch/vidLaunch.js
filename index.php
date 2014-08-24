@@ -33,34 +33,20 @@
 
 	</div><!-- end #container -->
 
-	<!-- Javascript -->
+	<!-- jQuery -->
 	<script src="js/jquery-1.11.1.min.js"></script>
 
-	<!-- PHP variables -->
+	<!-- Convert PHP variable for server time -->
 	<script type="text/javascript">
 		var serverTime = '<?php echo date("F d, Y H:i:s", time())?>',
 			serverDate = new Date(serverTime)
-			console.log(serverTime);
-	</script>
-
-	<!-- Display demo launch time -->
-	<script>
-		var displaySeconds = setInterval('startTime()', 1000);
-
-		var count = 4;
-		function startTime() {
-
-			if(count < 0){
-				clearInterval(displaySeconds);
-			} else{
-				document.getElementById('launch-count').innerHTML = count;
-				count--;
-			}
-		}
 	</script>
 	
-	<!-- Plugin -->
+	<!-- vidLaunch plugin -->
 	<script src="js/vidLaunch.js"></script>
+
+	<!-- Display demo launch time -->
+	<script src="js/demoDisplay.js"></script>
 	
 </body>
 </html>
