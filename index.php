@@ -28,7 +28,15 @@
 
 		<div class="text">
 			<h3>Features</h3>
-			<p>Some text describing what vidLaunch can do...</p>
+			<ul>
+				<li><p>Set the exact time to play your video</p></li>
+				<li><p>Choose to launch from server time or client time</p></li>
+				<li><p>Create custom playback loops for your video</p></li>
+			</ul>
+			<hr>
+			<div class="code-link">
+				<a href="https://github.com/m-hatch/vidLaunch.js"><p>View source code</p></a>
+			</div>
 		</div>
 
 	</div><!-- end #container -->
